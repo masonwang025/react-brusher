@@ -1,6 +1,6 @@
 # react-brusher
 
-<a href="https://react-brusher.netlify.app">react-brusher.netlify.app</a>
+**<a href="https://react-brusher.netlify.app">react-brusher.netlify.app</a>**
 
 React support + improvements. <a href="https://github.com/MasonWang025/brusher">MasonWang025/Brusher</a>
 
