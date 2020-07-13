@@ -1,26 +1,91 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import Brusher from "./Brusher.js";
+import GithubCorner from "react-github-corner";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GithubCorner
+        href="https://github.com/MasonWang025/react-brusher"
+        size="100"
+      />
+      <div className="container-fluid m-0 p-0">
+        <div className="row no-gutters">
+          <div className="col bg">
+            <Brusher
+              options={{
+                image: "img/abstract.jpg", // Path of the image to be used as a brush
+                brushStyle: "square", // Brush style (round, square, butt)
+                keepCleared: true,
+                brushSize: 25,
+                brushBlur: 50,
+              }}
+            >
+              Hover over any square
+            </Brusher>
+          </div>
+          <div className="col bg">
+            <Brusher
+              options={{
+                image: "img/abstract2.jpg", // Path of the image to be used as a brush
+                brushStyle: "round", // Brush style (round, square, butt)
+              }}
+            >
+              Hover over any square
+            </Brusher>
+          </div>
+          <div className="col bg">
+            <Brusher
+              options={{
+                image: "img/abstract3.jpg", // Path of the image to be used as a brush
+                brushStyle: "round", // Brush style (round, square, butt)
+                keepCleared: true,
+                brushSize: 100,
+                brushBlur: 20,
+              }}
+            >
+              Hover over any square
+            </Brusher>
+          </div>
+        </div>
+        <div className="row no-gutters">
+          <div className="col bg">
+            <Brusher
+              options={{
+                image: "img/abstract4.jpg", // Path of the image to be used as a brush
+                brushStyle: "round", // Brush style (round, square, butt)
+                brushBlur: 0,
+                brushSize: 20,
+                keepCleared: true,
+              }}
+            >
+              Hover over any square
+            </Brusher>
+          </div>
+          <div className="col bg">
+            <Brusher
+              options={{
+                image: "img/abstract5.jpg", // Path of the image to be used as a brush
+                brushStyle: "round", // Brush style (round, square, butt)
+              }}
+            >
+              Hover over any square
+            </Brusher>
+          </div>
+          <div className="col bg">
+            <Brusher
+              options={{
+                image: "img/abstract6.jpg", // Path of the image to be used as a brush
+                brushStyle: "square", // Brush style (round, square, butt)
+                brushBlur: 10,
+              }}
+            >
+              Hover over any square
+            </Brusher>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-
-export default App;
